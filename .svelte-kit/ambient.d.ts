@@ -34,8 +34,8 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const EFC_7076: string;
 	export const ELECTRON_NO_ASAR: string;
+	export const ELECTRON_NO_ATTACH_CONSOLE: string;
 	export const ELECTRON_RUN_AS_NODE: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
@@ -43,6 +43,8 @@ declare module '$env/static/private' {
 	export const LOGONSERVER: string;
 	export const NODE_ENV: string;
 	export const NUMBER_OF_PROCESSORS: string;
+	export const NVM_HOME: string;
+	export const NVM_SYMLINK: string;
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -56,6 +58,7 @@ declare module '$env/static/private' {
 	export const ProgramData: string;
 	export const ProgramFiles: string;
 	export const ProgramW6432: string;
+	export const PROMPT: string;
 	export const PSModulePath: string;
 	export const PUBLIC: string;
 	export const SESSIONNAME: string;
@@ -67,6 +70,7 @@ declare module '$env/static/private' {
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
+	export const VSCODE_CLI: string;
 	export const VSCODE_CODE_CACHE_PATH: string;
 	export const VSCODE_CRASH_REPORTER_PROCESS_TYPE: string;
 	export const VSCODE_CWD: string;
@@ -77,7 +81,9 @@ declare module '$env/static/private' {
 	export const VSCODE_NLS_CONFIG: string;
 	export const VSCODE_PID: string;
 	export const windir: string;
-	export const ZES_ENABLE_SYSMAN: string;
+	export const WSLENV: string;
+	export const WT_PROFILE_ID: string;
+	export const WT_SESSION: string;
 	export const __PSLockDownPolicy: string;
 }
 
@@ -118,8 +124,8 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		EFC_7076: string;
 		ELECTRON_NO_ASAR: string;
+		ELECTRON_NO_ATTACH_CONSOLE: string;
 		ELECTRON_RUN_AS_NODE: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
@@ -127,6 +133,8 @@ declare module '$env/dynamic/private' {
 		LOGONSERVER: string;
 		NODE_ENV: string;
 		NUMBER_OF_PROCESSORS: string;
+		NVM_HOME: string;
+		NVM_SYMLINK: string;
 		OneDrive: string;
 		OneDriveConsumer: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -140,6 +148,7 @@ declare module '$env/dynamic/private' {
 		ProgramData: string;
 		ProgramFiles: string;
 		ProgramW6432: string;
+		PROMPT: string;
 		PSModulePath: string;
 		PUBLIC: string;
 		SESSIONNAME: string;
@@ -151,6 +160,7 @@ declare module '$env/dynamic/private' {
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
+		VSCODE_CLI: string;
 		VSCODE_CODE_CACHE_PATH: string;
 		VSCODE_CRASH_REPORTER_PROCESS_TYPE: string;
 		VSCODE_CWD: string;
@@ -161,7 +171,9 @@ declare module '$env/dynamic/private' {
 		VSCODE_NLS_CONFIG: string;
 		VSCODE_PID: string;
 		windir: string;
-		ZES_ENABLE_SYSMAN: string;
+		WSLENV: string;
+		WT_PROFILE_ID: string;
+		WT_SESSION: string;
 		__PSLockDownPolicy: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
