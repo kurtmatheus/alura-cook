@@ -1,6 +1,6 @@
 <script lang="ts">
     import type ICategoria from "$lib/interfaces/ICategoria";
-    import Tag from "./Tag.svelte";
+    import IngredienteSelecionavel from "./IngredienteSelecionavel.svelte";
 
     export let categoria: ICategoria
 </script>
@@ -17,7 +17,11 @@
     <ul class="ingredientes">
         {#each categoria.ingredientes as ingrediente (ingrediente)}
             <li>
-                <Tag>{ingrediente}</Tag>
+                <IngredienteSelecionavel
+                    {ingrediente} 
+                    on:aoAdicionarIngrediente
+                    on:aoRemoverIngrediente
+                />
             </li>
         {/each}
     </ul>

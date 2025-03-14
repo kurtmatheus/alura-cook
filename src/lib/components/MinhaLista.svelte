@@ -2,7 +2,7 @@
 
     import Tag from "$components/Tag.svelte";
 
-    let ingredientes = ['Alho', 'Manteiga', 'Ovos']
+    export let ingredientes: string[]
 
 </script>
 <section class="minha-lista">
