@@ -1,20 +1,19 @@
 <script lang="ts">
     import { minhaLista } from "$lib/stores/minhaLista";
 
-
     import Tag from "./Tag.svelte";
 
-    let selecionado: boolean = false;
-
     export let ingrediente: string;
+
+    $: selecionado = $minhaLista.includes(ingrediente);
 
     function onClick() {
         selecionado = !selecionado
 
         if (selecionado) {
-            $minhaLista = [...$minhaLista, ingrediente];
+            minhaLista.adicionarIngrediente(ingrediente);
         } else {
-            $minhaLista = $minhaLista.filter((s) => s !== ingrediente);
+            minhaLista.removerIngrediente(ingrediente);
         }
     }
 </script>

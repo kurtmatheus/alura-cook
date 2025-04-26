@@ -5,6 +5,16 @@
     import categorias from "$lib/json/categorias.json";
     import Categoria from "$components/Categoria.svelte";
     import Tag from "$components/Tag.svelte";
+    import { minhaLista } from "$lib/stores/minhaLista";
+    import { beforeNavigate } from "$app/navigation";
+
+    $: listaVazia = $minhaLista.length === 0
+
+    beforeNavigate((nav) => {
+        if(listaVazia && nav.to?.route.id === '/receitas') {
+            nav.cancel();
+        }
+    })
 
 </script>
 
@@ -34,8 +44,17 @@
     </ul>
 
     <div class="buscar-receitas">
-        <a href="/receitas">
-            <Tag ativa={true} tamanho="lg">Buscar Receitas</Tag>
+        <a 
+            href="/receitas"
+            style:pointer-events={listaVazia ? 'none' : ''}
+        >
+            <Tag 
+                ativa={true} 
+                tamanho="lg"
+                desabilidata={listaVazia}
+            >
+            Buscar Receitas
+        </Tag>
         </a>
     </div>
 </main>
