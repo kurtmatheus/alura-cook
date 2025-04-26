@@ -17,11 +17,7 @@
     <ul class="ingredientes">
         {#each categoria.ingredientes as ingrediente (ingrediente)}
             <li>
-                <IngredienteSelecionavel
-                    {ingrediente} 
-                    on:aoAdicionarIngrediente
-                    on:aoRemoverIngrediente
-                />
+                <IngredienteSelecionavel {ingrediente}/>
             </li>
         {/each}
     </ul>
