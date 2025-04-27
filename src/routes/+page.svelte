@@ -1,5 +1,4 @@
 <script lang="ts">
-    import "../app.css";
     import Titulo from "$components/compartilhados/Titulo.svelte";
 
     import categorias from "$lib/json/categorias.json";
