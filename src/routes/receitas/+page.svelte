@@ -1,4 +1,5 @@
 <script>
+    import TagLink from "$components/compartilhados/TagLink.svelte";
     import Titulo from "$components/compartilhados/Titulo.svelte";
     import Receita from "$components/paginas/receitas/Receita.svelte";
 
@@ -8,12 +9,9 @@
     $: receitasFiltradas = receitas.filter((receita) =>
         receita.ingredientes.every((ingrediente) =>
             $minhaLista.includes(ingrediente)
-        )
+        )   
     );
 
-    console.log(receitas);
-    console.log($minhaLista);
-    console.log(receitasFiltradas);
 </script>
 
 <svelte:head>
@@ -43,6 +41,10 @@
             </li>
         {/each}
     </ul>
+
+    <div class="editar-lista">
+        <TagLink href="/">Voltar à Página Principal</TagLink>
+    </div>
 </main>
 
 <style>
@@ -66,5 +68,9 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5rem;
+    }
+    .editar-lista {
+        display: flex;
+        justify-content: center;
     }
 </style>

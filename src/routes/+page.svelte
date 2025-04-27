@@ -7,6 +7,7 @@
     import Tag from "$components/compartilhados/Tag.svelte";
     import { minhaLista } from "$lib/stores/minhaLista";
     import { beforeNavigate } from "$app/navigation";
+    import TagLink from "$components/compartilhados/TagLink.svelte";
 
     $: listaVazia = $minhaLista.length === 0
 
@@ -44,18 +45,7 @@
     </ul>
 
     <div class="buscar-receitas">
-        <a 
-            href="/receitas"
-            style:pointer-events={listaVazia ? 'none' : ''}
-        >
-            <Tag 
-                ativa={true} 
-                tamanho="lg"
-                desabilitada={listaVazia}
-            >
-            Buscar Receitas
-        </Tag>
-        </a>
+        <TagLink href="/receitas">Buscar Receitas</TagLink>
     </div>
 </main>
 
