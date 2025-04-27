@@ -1,10 +1,10 @@
 <script lang="ts">
     import "../app.css";
-    import Titulo from "$components/Titulo.svelte";
+    import Titulo from "$components/compartilhados/Titulo.svelte";
 
     import categorias from "$lib/json/categorias.json";
-    import Categoria from "$components/Categoria.svelte";
-    import Tag from "$components/Tag.svelte";
+    import Categoria from "$components/paginas/index/Categoria.svelte";
+    import Tag from "$components/compartilhados/Tag.svelte";
     import { minhaLista } from "$lib/stores/minhaLista";
     import { beforeNavigate } from "$app/navigation";
 
@@ -51,7 +51,7 @@
             <Tag 
                 ativa={true} 
                 tamanho="lg"
-                desabilidata={listaVazia}
+                desabilitada={listaVazia}
             >
             Buscar Receitas
         </Tag>

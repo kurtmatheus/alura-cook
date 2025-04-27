@@ -1,8 +1,8 @@
 <script>
-    import Cabecalho from "$components/Cabecalho.svelte";
-    import MinhaLista from "$components/MinhaLista.svelte";
+    import Cabecalho from "$components/paginas/layout/Cabecalho.svelte";
+    import MinhaLista from "$components/paginas/layout/MinhaLista.svelte";
     
-    import Rodape from "$components/Rodape.svelte";
+    import Rodape from "$components/paginas/layout/Rodape.svelte";
     import { minhaLista } from "$lib/stores/minhaLista";
 
 </script>
